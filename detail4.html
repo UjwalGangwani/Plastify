@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="add to cart/addtocart.css">
+   
+<!--box-icons-->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<link rel="stylesheet" href="styles.css">
+   
+<body>
+
+    <div class="product-page-container">
+        <!--route-->
+        <span class="link-route">
+            <a href="#">Products</a> > <a href="#">Detail</a>
+        </span>
+    </div>
+
+    <section class="product-page">
+        <!--img-->
+   <img class="product-page-img" src="PP4.jpg" alt="..."/>
+   <!--details-->
+   <div class="product-page-details">
+
+    <!--title-->
+   <strong>Cork Coasters (With Stand)</strong>
+   
+   <span class="price">₹ 299.00</span>
+  <!--details-->
+  <p class="small-desc">Cork is one of the most sustainable and eco-friendly materials. These coasters from the house of Vetas is made from cork and can be used in multiple ways. Using this Eco-friendly product in your office will create a stand-out image in front of your clients. These coasters can be used for home purposes also at the dining table.
+    <br>
+    Description:
+    <br>
+    Pack of 4 - 4 coaster with stand
+    <br>
+    Pack of 6 - 6 coasters with stand</p>
+    <!--discount-->
+    <span class="product-page-offer">20% discount</span>
+    <!--cart btn-->
+<div class="cart-btns">
+    <a href="add to cart/addtocart.php" class="add-cart">Add to Cart</a>
+    <a href="add to cart/addtocart.php" class="add-cart buy-now">Buy Now</a>
+</div>    
+<!--price and shipping-->
+<div class="price-shipping">
+    <strong>+RS.100 shipping</strong>
+</div>
+
+     
+    
+
+        </div>
+        
+
+    
+    
+   
+  
+
+   
+
+    </section>
+    <!--product-info-->
+    <section class="product-all-info">
+        <!--menu-->
+        <ul class="product-info-menu">
+            <li class="p-info-list active" data-filter="Highlights">Highlights</li>
+           <a href="#"><li class="p-info-list" data-filter="Materials">Materials</li></a>
+            <li class="p-info-list"data-filter="About">About</li>
+
+
+
+        </ul>
+        <div class="info-container Highlights active ">
+            <p>Cork is one of the most sustainable and eco-friendly materials. These coasters from the house of Vetas is made from cork and can be used in multiple ways. Using this Eco-friendly product in your office will create a stand-out image in front of your clients. These coasters can be used for home purposes also at the dining table.</p>
+        </div>
+        <div class="info-container Materials">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias ex magnam unde necessitatibus atque ullam tempora, quidem doloribus quisquam numquam quaerat, optio totam vitae temporibus! Ipsum exercitationem est quas?</p>
+        </div>
+
+        <div class="info-container About">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita alias ex magnam unde necessitatibus atque ullam tempora, quidem doloribus quisquam numquam quaerat, optio totam vitae temporibus! Ipsum exercitationem est quas?</p>
+        </div>
+
+
+    </section>
+    </div>
+    <script type="text/javascript" src="New folder/jquery-3.6.3.js"></script>
+    <script text="text/javascript">
+        //product info menu
+        $(document).on('click','.product-info-menu li',function()
+            {
+            $(this).addClass('active').siblings().removeClass('active')
+            });
+            //product-info-filter
+            $(document).ready(function(){
+             
+$('.p-info-list').click(function(){
+    const value= $(this).attr('data-filter');
+    if(value=='all')
+    {
+        $('.info-container').filter('.'+value).show('1000');
+
+    }
+    else{
+        $('.info-container').not('.'+value).hide('1000');
+        $('.info-container').filter('.'+value).show('1000');
+    }
+});
+                
+});
+    </script>
+</body>
+</html>
